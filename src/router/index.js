@@ -20,9 +20,10 @@ const routes = [
     component: Pages,
   },
   {
-    path: "/detail/:id",
-    name: "Detail",
+    path: "/detail/:id", // ✅ Dynamic route with `id`
+    name: "ProductDetail",
     component: Detail,
+    props: true, // ✅ Enable props to automatically pass `id` as a prop
   },
 ];
 const router = createRouter({

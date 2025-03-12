@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useRouter } from "vue-router";
-const router = useRouter();
+
 export default {
   components: {
     Swiper,
@@ -227,11 +227,12 @@ export default {
     const toggleFavorite = (index) => {
       products.value[index].isFavorite = !products.value[index].isFavorite;
     };
-    // Define the goToDetail function
+    const router = useRouter();
+
     const goToDetail = (id) => {
-      alert(`Navigating to detail page for product with ID ${id}`);
-      router.push({ name: "detail", params: { id }}); // Ensure this matches the router name
+      router.push({ name: "ProductDetail", params: { id: String(id) } }); // ✅ Ensure id is a string for routing
     };
+    
     return {
       banners,
       products,
@@ -239,6 +240,7 @@ export default {
       Navigation,
       Pagination,
       Autoplay,
+      goToDetail,
     };
   },
 };
