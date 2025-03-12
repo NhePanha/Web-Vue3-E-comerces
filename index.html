@@ -1,13 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Vue</title>
-    
+    <style>
+      body{
+        position: relative;
+      }
+      .back {
+        background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20250121/pngtree-fresh-aloe-vera-plant-and-gel-for-skincare-natural-remedies-image_16909243.jpg");
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #eb1818;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
   </head>
   <body>
+    <div class="back">
+      <img src="" alt="Vite Logo" />
+    </div>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>

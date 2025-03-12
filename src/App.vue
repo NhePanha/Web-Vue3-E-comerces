@@ -7,7 +7,6 @@
     <Footer />
   </div>
 </template>
-
 <script>
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
@@ -18,3 +17,4 @@ export default {
 <style>
 main { padding: 20px; min-height: 80vh; }
 </style>
+<style scoped src="./style.css"></style>

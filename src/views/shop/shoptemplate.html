@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div v-for="item in items" class="col-md-3 p-1">
+      <div class="card position-relative">
+        <img :src="item.image" class="card-img-top" alt="Product Image" />
+        <button
+          class="btn btn-light position-absolute top-0 end-0 m-2 rounded-circle"
+          @click="toggleFavorite(item)"
+        >
+          <i
+            :class="item.isFavorite ? 'bi bi-heart-fill text-danger' : 'bi bi-heart'"
+          ></i>
+        </button>
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <p class="card-text text-danger">${{ item.price }}</p>
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
